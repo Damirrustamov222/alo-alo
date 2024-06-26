@@ -1,0 +1,163 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 1400px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    margin: 0 auto;
+}
+
+.img_cloth{
+    height: 100%;
+    padding: 15px;
+}
+.img_svg{
+    width: 15px;
+}
+.box_cloth{
+    width: 364px;
+    margin: 20px auto;
+    background-color: black;
+    border: 2px solid gray;
+    position: relative;
+}
+.box_white{
+    width: 360px;
+    height: 199px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.cost{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 100px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    padding-left: 10px;
+    font-family: Gilroy;
+    font-size: 24px;
+    font-weight: 500;
+}
+.btn_cloth{
+    border: 1px solid rgba(0, 0, 0, 1);
+    width: 305px;
+    height: 55px;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+
+}
+
+.btn_one, .btn_two, .btn_three{
+    width: 254px;
+    height: 55px;
+    gap: 0px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.box2{
+    width: 100%;
+    padding:5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.first img{
+ width: 50px;
+
+}
+
+.first button{
+    padding: 5px;
+    border-radius: 5px;
+    width: 20px;
+    background-color:white ;
+    
+}
+.second{
+    text-align: right;
+}
+
+.second button{
+   padding: 5px;
+}
+
+
+.button{
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.btn{
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: scroll;
+    height: 100%;
+}
+dialog {
+    width: 30%;
+    min-height: 30%;
+    position: fixed;
+    top: 0;
+    transition: right .3s ease;
+  }
+  
+
+  
+ 
+
+   .flex{
+    display: flex;
+    justify-content: space-between;
+       }
+
+   .flex button{
+    width: 40px;
+    height: 40px;
+    border-radius:20px;
+       }
+
+.end{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+}
+.end h6{
+ font-size: large;
+}
+
+.active-btn{
+    background-color:blue;
+    color:white;
+}
