@@ -20,25 +20,25 @@
 }
 .box_cloth{
     width: 364px;
-    margin: 20px auto;
+    margin: 0 auto;
     background-color: black;
-    border: 2px solid gray;
-    position: relative;
+    border: 2px solid black;
 }
 .box_white{
-    width: 360px;
+    width: 100%;
     height: 199px;
     background-color: #fff;
     text-align: center;
 }
 
 .cost{
+  padding: 20px;
+}
+.pad{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 250px;
-    align-items: center;
-    padding-left: 30px;
-    margin-bottom: 100px;
+    gap: 14px;
 }
 a{
     color: #fff;
@@ -50,14 +50,10 @@ a{
 }
 .btn_cloth{
     border: 1px solid rgba(0, 0, 0, 1);
-    width: 305px;
-    height: 55px;
+    width: 100%;
     border-radius: 10px;
-    margin-left: 30px;
-    margin-bottom: 10px;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
+    padding: 20px;
+    margin-top: 20px;
 
 }
 
@@ -69,7 +65,6 @@ a{
     background-color: #fff;
     margin-top: 25px;
     margin-bottom: 60px;
-    cursor: pointer;
 }
 
 .box2{
@@ -122,14 +117,12 @@ a{
     flex-direction: column;
     gap: 14px;
     overflow-y: scroll;
-    height: 100%;
+    max-height: 30%;
 }
 dialog {
     width: 30%;
-    min-height: 30%;
-    position: fixed;
-    top: 0;
-    transition: right .3s ease;
+    min-height: 100%;
+    
   }
   
 

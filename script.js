@@ -2,8 +2,10 @@ const cont = document.querySelector('.container')
 const cont_cart = document.querySelector('.box')
 const five = document.querySelector('.btn_one')
 const all = document.querySelector('.btn_two')
-const total_view = document.querySelector('#total_view  ')
+const total_view = document.querySelector('#total_view')
+const all_total = document.querySelector(`.all`)
 
+let cart_total = 0
 let cart =[]
 
 reload(arr, cont, Product)

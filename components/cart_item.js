@@ -1,4 +1,7 @@
 function cart_item(item) {
+
+    let quantity = 1;
+    cart_total += Number((item.price * quantity).toFixed(2));
     const box2 = document.createElement('div');
     const first = document.createElement('div');
     const minus = document.createElement('div');
@@ -29,7 +32,7 @@ function cart_item(item) {
     removebtn.classList.add('removeContainer'); 
     itemName.innerHTML = item.category ;
     minusButton.innerHTML = '-';
-    count.innerHTML = 1;
+    count.innerHTML = quantity ;
     plusButton.innerHTML = '+';
     price.innerHTML = item.price;
     remove.innerHTML = 'Remove';
@@ -52,23 +55,47 @@ function cart_item(item) {
     box.append(box2);
 
 
-
-    plusButton.addEventListener('click', () => {
-        count.innerHTML = parseInt(count.innerHTML) + 1;
-    });
-
+    plusButton.onclick = () => {
+        if (quantity < item.rating.count) {
+            quantity++;
+            count.textContent = quantity;
+            calc_total_amount("plus");
+            return;
+        }
+        alert('В наличии нет');
+    };
+    
     minusButton.onclick = () => {
-        if (parseInt(count.innerHTML) > 1) {
-            count.innerHTML = parseInt(count.innerHTML) - 1;
+        if (quantity > 0) {
+            quantity--;
+            count.textContent = quantity;
+            calc_total_amount("minus");
         }
     };
-
+    
+    function calc_total_amount(param) {
+        price.innerHTML = (item.price * quantity).toFixed(2);
+        if (param === "plus") {
+            cart_total += Number(item.price.toFixed(2));
+        } else {
+            cart_total -= Number(item.price.toFixed(2));
+        }
+        all_total.innerHTML = cart_total
+    }
     remove.onclick = () => {
-        const selector = cart.findIndex(el => el.id === item.id);
-
-        cart.splice(selector, 1 )
-        button.classList.remove('active-btn');
-        button.innerHTML = "В избранное";
+        const idx = cart.indexOf(item);
+        const counter = document.querySelector('#total_view');
+        const productDiv = document.querySelector(`#selector_${item.id}`);
+        const btn = productDiv.querySelector('.btn_cloth');
+    
+        btn.classList.remove("active-btn");
+        btn.innerHTML = `В избранное`;
+    
+        cart.splice(idx, 1);
+        counter.innerHTML = cart.length;
+        box2.remove(item);
     };
+    
+    return box2;
     
 }
